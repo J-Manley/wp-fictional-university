@@ -16,3 +16,14 @@ function university_features()
 }
 
 add_action('after_setup_theme', 'university_features');
+
+function register_my_menus()
+{
+  register_nav_menus(
+    array(
+      'header' => __('Header Menu'),
+      'submenu' => __('Sub Menu')
+    )
+  );
+}
+add_action('init', 'register_my_menus');
